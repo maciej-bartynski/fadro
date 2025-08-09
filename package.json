@@ -1,0 +1,21 @@
+{
+  "name": "fadro",
+  "version": "1.0.0",
+  "description": "Rules that create workflow with AI agent",
+  "main": "index.js",
+  "files": [
+    "rules",
+    "docs",
+    "config"
+  ],
+  "bin": {
+    "fadro": "index.js"
+  },
+  "keywords": [
+    "AI",
+    "Cursor",
+    "workflow"
+  ],
+  "author": "bartek01001",
+  "license": "ISC"
+}
