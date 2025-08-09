@@ -25,12 +25,12 @@ function copyConfig() {
 
 function addToGitignore() {
     const gitignorePath = path.join(process.cwd(), '.gitignore');
-    const entryToAdd = 'docs/task-log.md';
+    const entryToAdd = '# Fadro ignore\n' + 'docs/task-log.md';
 
-    let content = '# Fadro ignore\n';
+    let content = '';
 
     if (fs.existsSync(gitignorePath)) {
-        content = fs.readFileSync(gitignorePath, 'utf8');
+        content += fs.readFileSync(gitignorePath, 'utf8');
     } else {
         return;
     }
