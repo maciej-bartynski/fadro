@@ -19,7 +19,7 @@ function copyDirContent(from, to) {
 
 function copyConfig() {
     const configName = 'cursorignore';
-    const cursorignore = path.join('config', configName);
+    const cursorignore = path.join(__dirname, 'config', configName);
     fs.copyFileSync(cursorignore, `.${configName}`);
 }
 
