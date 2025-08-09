@@ -2,6 +2,32 @@
 alwaysApply: true
 ---
 
+# Fadro Workflow
+
+**Fadro** is a framework that organizes work with the current codebase into well-defined phases.  
+Always follow this framework completely when working with the codebase.  
+Fadro is fully described in this file.
+
+---
+
+## Phases Overview
+
+Fadro runs in the following phases, in order:
+
+1. **Analyse**  
+2. **Implement**
+3. **Adjust**  
+4. **Summarise**
+
+These phases are controlled **exclusively** by the file:
+
+`{root}/docs/task-log.md` - see: [Task Log](../../docs/task-log.md)
+
+The current phase is always stated in the **"Phase"** section of that file.  
+See: [Task Log – Phase Section](../../docs/task-log.md#Phase)
+
+---
+
 ## Fadro Core Files
 
 1. **`{root}/README.md`** — see [README.md](../../README.md)  
@@ -120,7 +146,7 @@ When prompted with the **exact** case-sensitive command:
 2. If not required, skip updates.
 3. Log in `{root}/docs/task-log.md` ("Progress logs") what was done or skipped.
 4. Request approval to finish the phase.
-5. Announce phase completion upon approval.
+5. Announce phase completion upon approval (in "Progress logs").
 
 ---
 
@@ -138,6 +164,6 @@ When prompted with the **exact** case-sensitive command:
 **Workflow:**
 1. Add the summary to `{root}/docs/task-log.md` ("Progress logs") below previous entries.
 2. Request approval to finish the phase.
-3. Upon approval, log the approval below the summary.
+3. Upon approval, log the approval below the summary (in "Progress logs").
 
 
