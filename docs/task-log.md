@@ -19,10 +19,11 @@ Both files combined must fully describe how to understand, maintain, develop, te
 
 ## General Workflow
 1. **Index and analyze the entire codebase** before creating either file.
-2. Identify and document all relevant details about:
+2. Identify all relevant details about:
+   - Project structure
    - Code type (frontend, backend, or both)
    - Language and version (JavaScript ECMAScript version, TypeScript version if applicable)
-   - Commands in `package.json` and their purpose
+   - All commands in `package.json` and their purpose
    - Build tools, configurations, and workflows
    - Testing tools, configurations, and scope (source code or build code)
    - Transpilation details (if TypeScript is used)
@@ -32,7 +33,8 @@ Both files combined must fully describe how to understand, maintain, develop, te
    - Additional installed developer tools
    - CI/CD pipeline setup and required configuration files
    - Frameworks or libraries in use (or if code is vanilla)
-3. Decide which details belong in `README.md` and which belong in `docs/DEVELOPMENT.md` (see file-specific requirements below).
+3. Re-think how to organise this knowledge into direct, descriptive files, without unnecessary, to obvious or made-up informations.
+4. Decide which content belong in `README.md` and which belong in `docs/DEVELOPMENT.md` (see file-specific requirements below).
 
 ---
 
@@ -74,12 +76,27 @@ Content:
 ---
 
 ## Rules for Both Files
-- **No vague language** — write as if every reader has zero prior knowledge.
-- **No assumptions** — explicitly state all steps, paths, commands, and configurations.
+- **No vague language** — write as if every reader has zero prior knowledge of this project. 
+- However, every reader has general prior knowledge of JavaScript ecosystem, git and programming in general.
+- **No assumptions** — explicitly state all steps, paths, commands, and configurations, specific to this project. 
 - Use the **same terminology consistently** across both files.
 - Provide **examples** for commands, configurations, and workflows when useful.
 - Organize content with clear headings and ordered steps.
 - Both humans and AI should be able to follow the instructions without external help.
+- Avoid unnecessary content at all cost.
+
+   Example of unnecesary content for `README.md` - this content is to obvious:
+
+   > Clone repo:
+   > ```bash
+   > git clone {repo-url}
+   > ```
+
+   Example of unnsecessary content for `docs/DEVELOPMENT.md` - this content is made-up:
+
+   Troubleshooting: *whole section, because you don't know anything of project problems yet*
+
+- Read and follow your own instructions, to check if they are accurate
 
 ---
 

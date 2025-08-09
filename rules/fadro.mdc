@@ -132,7 +132,7 @@ When prompted with the **exact** case-sensitive command:
 ### 3. Phase: Adjust
 
 - Determine whether **Fadro Core Files** need updating due to changes from previous phases.  
-  Update is required if **any** of these occurred:
+  Updates for README.md or DEVELOPMENT.md may be required, if **any** of these occurred:
   - Development workflow changed (NPM scripts, build process, dev/test process, etc.).
   - End-user workflow changed (for NPM packages: installation, usage, etc.).
   - Any project config file changed (e.g., `tsconfig.json`, `vitest.config.js`, `package.json`, `.gitignore`, `.npmignore`, etc.).
@@ -140,6 +140,13 @@ When prompted with the **exact** case-sensitive command:
   - New packages/tools added or removed.
   - Directory structure changed.
   - Any Fadro Core File no longer reflects reality.
+
+  Update for `{root}/.cursor/rules` may be necessary if any rule becomes to low specific, not clear or new rule is necessary. For example, if any of these occured:
+  - Scenario 1: Ambitious Young Developer asked, why one or more rules are violated: "Why this variable has polish name?", "Why didn't You checked correct Phase name?", "Why plan of work wasn't detailed enough in first attempt?". Meaning: possibly some rules need to be more specific or reworded.
+  - Scenario 2: Ambitious Young Developer pointed out, that you weren't specific enough during coding, testing or creating docs. Meaning: possibly some docs or rules are missing and You don't understand codebase, or understand it wrongly.
+  - Scenario 3: Ambitious Young Developer repeatedly ask for the same code improvement, for example: "Write test for this piece of code", "Expose this module to tests", "Write test with well defined assertions". Meaning: possibly You are lack of important informations about development flow; therefore, some rules or docs should be created of imporoved.
+
+  This list of three scenarios is not exclusive list.
 
 **Workflow:**
 1. If updates are required, update the relevant Fadro Core Files.
