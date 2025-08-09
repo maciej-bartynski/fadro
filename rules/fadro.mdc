@@ -2,32 +2,6 @@
 alwaysApply: true
 ---
 
-# Fadro Workflow
-
-**Fadro** is a framework that organizes work with the current codebase into well-defined phases.  
-Always follow this framework completely when working with the codebase.  
-Fadro is fully described in this file.
-
----
-
-## Phases Overview
-
-Fadro runs in the following phases, in order:
-
-1. **Analyse**  
-2. **Implement**
-3. **Adjust**  
-4. **Summarise**
-
-These phases are controlled **exclusively** by the file:
-
-`{root}/docs/task-log.md` - see: [Task Log](../../docs/task-log.md)
-
-The current phase is always stated in the **"Phase"** section of that file.  
-See: [Task Log – Phase Section](../../docs/task-log.md#Phase)
-
----
-
 ## Fadro Core Files
 
 1. **`{root}/README.md`** — see [README.md](../../README.md)  
@@ -71,6 +45,14 @@ When prompted with the **exact** case-sensitive command:
 3. The **"Phase"** section contains the current phase name.  
 4. If either section is missing, request that the **Ambitious Young Developer** fill them in.  
 5. If all is set, identify the current phase and follow its rules exactly.
+
+### Phase Change Rules
+- **CRITICAL**: AI **NEVER** changes the phase in docs/task-log.md
+- **ONLY** Ambitious Young Developer can change the phase
+- **AI must wait** for explicit phase change in the file
+- **Example of violation**: AI declaring "Phase X complete" without user changing phase
+- **Example of correct behavior**: AI waits for user to change phase, then executes it
+- **If AI needs next phase**: Request user to change phase in task-log.md
 
 ---
 
@@ -141,12 +123,15 @@ When prompted with the **exact** case-sensitive command:
   - Directory structure changed.
   - Any Fadro Core File no longer reflects reality.
 
-  Update for `{root}/.cursor/rules` may be necessary if any rule becomes to low specific, not clear or new rule is necessary. For example, if any of these occured:
-  - Scenario 1: Ambitious Young Developer asked, why one or more rules are violated: "Why this variable has polish name?", "Why didn't You checked correct Phase name?", "Why plan of work wasn't detailed enough in first attempt?". Meaning: possibly some rules need to be more specific or reworded.
-  - Scenario 2: Ambitious Young Developer pointed out, that you weren't specific enough during coding, testing or creating docs. Meaning: possibly some docs or rules are missing and You don't understand codebase, or understand it wrongly.
-  - Scenario 3: Ambitious Young Developer repeatedly ask for the same code improvement, for example: "Write test for this piece of code", "Expose this module to tests", "Write test with well defined assertions". Meaning: possibly You are lack of important informations about development flow; therefore, some rules or docs should be created of imporoved.
+  Update for `{root}/.cursor/rules` may be necessary if any rule becomes too low specific, not clear or new rule is necessary. For example, if any of these occurred:
+  - **Scenario 1**: Ambitious Young Developer asked, why one or more rules are violated: "Why this variable has polish name?", "Why didn't You checked correct Phase name?", "Why plan of work wasn't detailed enough in first attempt?". Meaning: possibly some rules need to be more specific or reworded.
+  - **Scenario 2**: Ambitious Young Developer pointed out, that you weren't specific enough during coding, testing or creating docs. Meaning: possibly some docs or rules are missing and You don't understand codebase, or understand it wrongly.
+  - **Scenario 3**: Ambitious Young Developer repeatedly ask for the same code improvement, for example: "Write test for this piece of code", "Expose this module to tests", "Write test with well defined assertions". Meaning: possibly You are lack of important informations about development flow; therefore, some rules or docs should be created or improved.
+  - **Scenario 4**: User questions AI's understanding of workflow or points out repeated mistakes
+  - **Scenario 5**: AI makes same mistake multiple times despite existing rules
+  - **Scenario 6**: User points out gaps in AI's knowledge or understanding
 
-  This list of three scenarios is not exclusive list.
+  **This list is NOT exhaustive** - any situation where rules prove insufficient requires update.
 
 **Workflow:**
 1. If updates are required, update the relevant Fadro Core Files.
@@ -172,5 +157,3 @@ When prompted with the **exact** case-sensitive command:
 1. Add the summary to `{root}/docs/task-log.md` ("Progress logs") below previous entries.
 2. Request approval to finish the phase.
 3. Upon approval, log the approval below the summary (in "Progress logs").
-
-

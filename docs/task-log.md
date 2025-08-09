@@ -106,9 +106,29 @@ Content:
 
 ---
 
-## Verification
+## Documentation Quality Rules
+
+### Content Creation Rules
+- **NEVER** create sections "out of thin air"
+- **NEVER** include obvious information (e.g., "Clone the repository")
+- **ALWAYS** verify information accuracy before including
+- **If unsure**: Ask user or skip the section
+- **Content must be**: Specific, actionable, and verified
 - Ensure no duplicated content between files.
 - Validate that a new developer (human or AI) could work with the project using only these two files.
 - Confirm that production deployment can be done following only these docs.
+
+### Documentation Testing Rules
+- **ALWAYS** test documentation examples and workflows
+- **NEVER** assume documentation is correct without verification
+- **If testing fails**: Ask user if you can ignore errors or request manual cleanup
+- **Proactive testing**: Test before declaring documentation complete
+- **Test coverage**: Verify all commands, workflows, and examples work as documented
+
+### Quality Verification Process
+1. **Before declaring complete**: Test all documented workflows
+2. **If errors occur**: Document them and ask user how to proceed
+3. **If cleanup needed**: Request user permission or ask for manual cleanup
+4. **Final verification**: Ensure documentation matches actual project behavior
 
 # Progress logs
