@@ -25,7 +25,7 @@ function copyConfig() {
 
 function addToGitignore() {
     const gitignorePath = path.join(process.cwd(), '.gitignore');
-    const entryToAdd = '# Fadro\n' + 'docs/task-log.md';
+    const entryToAdd = '\n# Fadro\n' + 'docs/task-log.md';
 
     let content = '';
 
@@ -36,7 +36,7 @@ function addToGitignore() {
     }
 
     const lines = content.split(/\r?\n/);
-    if (!lines.includes(entryToAdd)) {
+    if (!lines.includes('# Fadro')) {
         const newContent = content.endsWith('\n') ? content + entryToAdd + '\n' : content + '\n' + entryToAdd + '\n';
         fs.writeFileSync(gitignorePath, newContent, 'utf8');
     }
